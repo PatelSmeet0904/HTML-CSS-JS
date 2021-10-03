@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Website</title>
+    <link rel="stylesheet" href="css/animate.css">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div>
+        <button onclick="topFunction()" id="myBtn" class="up" title="Go to top">>>></button>
+    </div>
+
+    <!-----------Home Section------------>
+
+    <section id="container">
+        <div class="navbar">
+            <img src="img/logo.png" alt="" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#service">Services</a></li>
+                    <li><a href="#gallery">Galary</a></li>
+                    <li><a href="#plan">Plan</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div id="menuBtn">
+                <img src="img/menu.png" id="menu">
+            </div>
+        </div>
+
+        <div class="banner-text">
+            <h1 class="wow slideInLeft" data-wow-delay="1s">Get <span>Fit</span> With <span>Us</span></h1>
+            <p class="wow slideInLeft" data-wow-delay="1s">All progress takes place OUTSIDE your comfort zone</p>
+            <div class="banner-btn" class="wow slideInLeft" data-wow-delay="1s">
+                <a href="#" id="button" class="button"><span></span>Registar for trial</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form for trial pre-registration -->
+    <div class="bg-modal">
+        <div class="modal-contents">
+
+            <div class="close">+</div>
+
+            <form action="insert.php" method="POST" target="_blank">
+                <table>
+                    <tr>
+                        <td>Name :</td>
+                        <td><input type="text" name="username" required></td>
+                    </tr>
+                    <tr>
+                        <td>Email :</td>
+                        <td><input type="email" name="email" required></td>
+                    </tr>
+                    <tr>
+                        <td>Phone no :</td>
+                        <td>
+                            <input type="phone" name="phone" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Gender :</td>
+                        <td>
+                            <input type="radio" name="gender" value="m" required>Male
+                            <input type="radio" name="gender" value="f" required>Female
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Date :</td>
+                        <td><input type="date" name="date" required></td>
+                    </tr>
+                    <tr>
+                        <td>GYM Branch :</td>
+                        <td>
+                            <select name="selectbranch" required>
+                                <option selected hidden value="">Select-branch</option>
+                                <option value="Nikol, Ahmedabad">Nikol, Ahmedabad</option>
+                                <option value="Shahibaug, Ahmedabad">Shahibaug, Ahmedabad</option>
+                                <option value="Maninagar, Ahmedabad">Maninagar, Ahmedabad</option>
+                                <option value="Paldi, Ahmedabad">Paldi, Ahmedabad</option>
+                                <option value="Gandhinagar">Gandhinagar</option>
+                                <option value="Adajan, Surat">Adajan, Surat</option>
+                                <option value="Pal, Surat">Pal, Surat</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="Submit" name="submit" onclick="return message();"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- -------Features Section------ -->
+
+    <section id="features">
+        <h1 class="heading">Features</h1>
+        <div class="container">
+            <div class="feature-box">
+                <div class="feature-top">
+                    <img src="img/feature-1.jpg" alt="" srcset="">
+                </div>
+                <div class="feature-middle">
+                    <i class="fa fa-trophy"></i>
+                    <h4>Certified Trainers</h4>
+                </div>
+                <div class="feature-bottom">
+                    <p>We have a team of best certified trainers. Our personal trainers are here to help all members
+                        seeking to make the most out of their workouts. A personal trainer can help you establish a
+                        timeline for realistic goals and break them down into smaller components. They are very
+                        friendly, knowledgeable and highly motivated in helping you achieve your fitness goals. On your
+                        first session, you can expect to share a little bit about yourself, your medical history and
+                        what your lifestyle consists of.</p>
+                </div>
+            </div>
+
+            <div class="feature-box">
+                <div class="feature-top">
+                    <img src="img/feature-2.jpg" alt="" srcset="">
+                </div>
+                <div class="feature-middle">
+                    <i class="fa fa-expand"></i>
+                    <h4>Wide Space</h4>
+                </div>
+                <div class="feature-bottom">
+                    <p>Our 22,000 square foot space allows us to carry everything you would look for in a gym! We have
+                        filled the gym with top of the line machines, weights and workout accessories to help all of our
+                        members reach their personal goals. We have a large class room that holds 80+ classes a week
+                        featuring zumba, yoga, pilates, muscle conditioning, trx and much more. Our class areas are big
+                        enough to allow no pre-registration, this makes working out a worry free and easy task.</p>
+                </div>
+            </div>
+
+            <div class="feature-box">
+                <div class="feature-top">
+                    <img src="img/feature-3.jpg" alt="" srcset="">
+                </div>
+                <div class="feature-middle">
+                    <i class="fa fa-clock-o"></i>
+                    <h4>Flexible Time</h4>
+                </div>
+                <div class="feature-bottom">
+                    <p>Being a 24/7 gym is one of our best amenities because we can offer our members unrestricted
+                        freedom of access from sun up to sun down and everywhere in between. You no longer have to worry
+                        about cramming in gym time before we close! The flexibility of having access to the gym 24/7
+                        makes it easier for your to plan your schedule and cut down on the excuses of not being able to
+                        go to the gym. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Service Section-->
+
+    <section id="service">
+        <h1 class="heading">Services</h1>
+        <div class="service-box">
+            <div class="single-service">
+                <img src="img/service_yoga.png">
+                <div class="overlay"></div>
+                <div class="service-desc">
+                    <h3>Yoga classes</h3>
+                    <hr>
+                    <p>Yoga practice is a great way to strengthen the bond between your mind and your body. A simple
+                        yoga practice can increase your levels of concentration, alleviate symptoms of anxiety, help you
+                        sleep better at time, increase flexibility.</p>
+                </div>
+            </div>
+            <div class="single-service">
+                <img src="img/service_zumba.png">
+                <div class="overlay"></div>
+                <div class="service-desc">
+                    <h3>Zumba classes</h3>
+                    <hr>
+                    <p>Zumba is a dance based workout. If you “don’t like working out” – you obviously have not tried
+                        shaking your booty in a zumbaclass! Zumba will change your life one beat at a time.</p>
+                </div>
+            </div>
+            <div class="single-service">
+                <img src="img/service-aerobic.jpg">
+                <div class="overlay"></div>
+                <div class="service-desc">
+                    <h3>Aerobic classes</h3>
+                    <hr>
+                    <p>Aerobic classes are meant to make you move, sweat and get a little out of breath. Our certified
+                        instructors know how to make you move and know exactly when to start pushing you.</p>
+                </div>
+            </div>
+            <div class="single-service">
+                <img src="img/service-personal training.jpg">
+                <div class="overlay"></div>
+                <div class="service-desc">
+                    <h3>Personal Training</h3>
+                    <hr>
+                    <p>A personal trainer can help you establish a timeline for realistic goals and break them down into
+                        smaller components. They will motivate you to keep coming and to keep pushing. They are like
+                        your personal cheerleader for an hour!</p>
+                </div>
+            </div>
+            <div class="single-service">
+                <img src="img/service-steam room.png">
+                <div class="overlay"></div>
+                <div class="service-desc">
+                    <h3>Steam & Sauna Rooms</h3>
+                    <hr>
+                    <p>We offers a relaxing spa area equipped with steam, sauna, shower and beauty station. The steam
+                        room has the ability to help clear skin, improve circulation and open up the sinuses.</p>
+                </div>
+            </div>
+            <div class="single-service">
+                <img src="img/service-lockers.jpg">
+                <div class="overlay"></div>
+                <div class="service-desc">
+                    <h3>Changing room & Lockers</h3>
+                    <hr>
+                    <p>If you are coming at gym from your work or you want to go at work after gym then you can change
+                        your cloth & also take a shower in Changing room. By using Lockers you can secure your important
+                        things.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- Start Gallery -->
+    <section class="gallery" id="gallery">
+        <h1 class="heading">Workout Gallery</h1>
+        <div class="content">
+            <div class="box wow slideInLeft">
+                <img src="img/gallery1.jpg" alt="gallery" />
+            </div>
+            <div class="box wow slideInRight">
+                <img src="img/gallery2.jpg" alt="gallery" />
+            </div>
+            <div class="box wow slideInLeft">
+                <img src="img/gallery3.jpg" alt="gallery" />
+            </div>
+            <div class="box wow slideInRight">
+                <img src="img/gallery4.jpg" alt="gallery" />
+            </div>
+            <div class="box wow slideInLeft">
+                <img src="img/gallery5.jpg" alt="gallery" />
+            </div>
+            <div class="box wow slideInRight">
+                <img src="img/gallery6.jpg" alt="gallery" />
+            </div>
+        </div>
+    </section>
+    <!-- End Gallery -->
+
+
+    <!-- plan section starts  -->
+
+    <section class="plan" id="plan">
+
+        <h1 class="heading">Membership Plan</h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3 class="title">Basic</h3>
+                <h3 class="price">₹1,000<span>/month</span></h3>
+                <ul>
+                    <li><i class="fas fa-check"></i>weight lifting</li>
+                    <li><i class="fas fa-check"></i>cardio</li>
+                    <li><i class="fas fa-check"></i>yoga</li>
+                    <li><i class="fas fa-check"></i>zumba</li>
+                    <li><i class="fas fa-check"></i>aerobics</li>
+                </ul>
+                <a href="#" id="join"><button class="btn">Join Now</button></a>
+            </div>
+
+            <div class="box">
+                <h3 class="title">Standard</h3>
+                <h3 class="price">₹15,000<span>/year</span></h3>
+                <ul>
+                    <li><i class="fas fa-check"></i>weight lifting</li>
+                    <li><i class="fas fa-check"></i>cardio</li>
+                    <li><i class="fas fa-check"></i>yoga</li>
+                    <li><i class="fas fa-check"></i>zumba</li>
+                    <li><i class="fas fa-check"></i>aerobics</li>
+                    <li><i class="fas fa-check"></i>Personal training (12 session)</li>
+                </ul>
+                <a href="#" id="join-1"><button class="btn">Join Now</button></a>
+            </div>
+
+            <div class="box">
+                <h3 class="title">Premium</h3>
+                <h3 class="price">₹30,000<span>/year</span></h3>
+                <ul>
+                    <li><i class="fas fa-check"></i>weight lifting</li>
+                    <li><i class="fas fa-check"></i>cardio</li>
+                    <li><i class="fas fa-check"></i>yoga</li>
+                    <li><i class="fas fa-check"></i>zumba</li>
+                    <li><i class="fas fa-check"></i>aerobics</li>
+                    <li><i class="fas fa-check"></i>Personal training (36 session with premium trainer)</li>
+                    <li><i class="fas fa-check"></i>protein powder</li>
+                </ul>
+                <a href="#" id="join-2"><button class="btn">Join Now</button></a>
+            </div>
+
+        </div>
+    </section>
+    <!-- Form for membership -->
+    <div class="join-form">
+        <div class="modal-contents">
+
+            <div class="close-form">+</div>
+
+            <form action="member.php" method="post" target="_blank">
+                <table>
+                    <tr>
+                        <td>Name :</td>
+                        <td><input type="text" name="username" required></td>
+                    </tr>
+                    <tr>
+                        <td>Email :</td>
+                        <td><input type="email" name="email" required></td>
+                    </tr>
+                    <tr>
+                        <td>Address :</td>
+                        <td><input type="text" name="address" required></td>
+                    </tr>
+                    <tr>
+                        <td>Phone no :</td>
+                        <td>
+                            <input type="phone" name="phone" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Age :</td>
+                        <td><input type="age" name="age" required></td>
+                    </tr>
+                    <tr>
+                        <td>Gender :</td>
+                        <td>
+                            <input type="radio" name="gender" value="male" required>Male
+                            <input type="radio" name="gender" value="female" required>Female
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Membership Plan :</td>
+                        <td>
+                            <select name="plan" required>
+                                <option selected hidden value="">Select-Plan</option>
+                                <option value="1 Months (₹1,000)">1 Months (₹1,000)</option>
+                                <option value="3 Months (₹3,000)">3 Months (₹3,000)</option>
+                                <option value="6 Months (₹6,000)">6 Months (₹6,000)</option>
+                                <option value="12 Months (₹12,000)">12 Months (₹12,000)</option>
+                                <option value="1 Year + 1 Month PT (₹15,000)">1 Year + 1 Month PT (₹15,000)</option>
+                                <option value="1 Year + 3 Month PT (₹30,000)">1 Year + 3 Month PT (₹30,000)</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Payment Method :</td>
+                        <td>
+                            <input type="radio" name="payment" value="Cash" required>Cash
+                            <input type="radio" name="payment" value="Online" required>Online
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Membership Info :</td>
+                        <td>
+                            <select name="membershipinfo" required>
+                                <option selected hidden value="">Select</option>
+                                <option value="Already a gym member">Already a gym member</option>
+                                <option value="Not a gym member">Not a gym member</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>GYM Branch :</td>
+                        <td>
+                            <select name="branch" required>
+                                <option selected hidden value="">Select-branch</option>
+                                <option value="Nikol, Ahmedabad">Nikol, Ahmedabad</option>
+                                <option value="Shahibaug, Ahmedabad">Shahibaug, Ahmedabad</option>
+                                <option value="Maninagar, Ahmedabad">Maninagar, Ahmedabad</option>
+                                <option value="Paldi, Ahmedabad">Paldi, Ahmedabad</option>
+                                <option value="Gandhinagar">Gandhinagar</option>
+                                <option value="Adajan, Surat">Adajan, Surat</option>
+                                <option value="Pal, Surat">Pal, Surat</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="Submit" name="submit" onclick="return message();"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+
+    <!-- plan section ends -->
+
+
+    <!----------Testimonial----------->
+
+    <section id="testimonial">
+        <div class="title-text">
+            <h1 class="heading">Testimonial</h1>
+            <h2>What Client Says</h2>
+        </div>
+        <div class="testimonial-row">
+            <div class="testimonial-col">
+                <div class="user">
+                    <img src="img/img-3.jpg">
+                    <div class="user-info">
+                        <h4>KEN NORMAN <i class="fa fa-twitter"></i></h4>
+                        <small>@kennorman</small>
+                    </div>
+                </div>
+                <p>By far the best facility around. This new location is mint from the staff, to the equipment, to the
+                    facility itself. From the ownership, to management, to the trainers, by far the nicest and most
+                    knowledgeable staff in the business today. I wouldn’t hesitate to recommend Life fitness to anyone.
+                    I am certainly satisfied thus far and have been blown away by my experience at this new facility</p>
+            </div>
+            <div class="testimonial-col">
+                <div class="user">
+                    <img src="img/img-2.jpg">
+                    <div class="user-info">
+                        <h4>Liara Karian <i class="fa fa-twitter"></i></h4>
+                        <small>@liarakarian</small>
+                    </div>
+                </div>
+                <p>Life fitness has been awesome to me. Their trainers are exceptional, the overall vibe is great and I
+                    have had nothing but good experiences. I definitely recommend them to my friends and family.</p>
+            </div>
+            <div class="testimonial-col">
+                <div class="user">
+                    <img src="img/img-1.jpg">
+                    <div class="user-info">
+                        <h4>Ricky Danial <i class="fa fa-twitter"></i></h4>
+                        <small>@rickydanial</small>
+                    </div>
+                </div>
+                <p>This is a fantastic gym!! All the trainers are super nice and take an interest in you no matter what
+                    fitness level you’re at. I really like how they give me tips and tricks to get the most out of every
+                    workout. I’ve been going for a little bit and am already seeing a big change in my energy levels and
+                    body. It’s great! I feel 10 years younger!</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- -------Contact Section-------- -->
+
+    <section class="contact" id="contact">
+        <div class="content">
+            <div class="box form wow slideInLeft">
+                <form action="submit form">
+                    <input type="text" placeholder="Enter Name">
+                    <input type="text" placeholder="Enter Email">
+                    <input type="text" placeholder="Enter Mobile">
+                    <textarea placeholder="Enter Message"></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+
+            </div>
+            <div class="box text wow slideInRight">
+                <h2>Get Connected with Gym</h2>
+                <div class="info">
+                    <ul>
+                        <li><span class="fa fa-map-marker"></span> Shantiniketan complex, 3rd Flor, Ahmedabad, Gujrat
+                        </li>
+                        <li><span class="fa fa-phone"></span> +91 8320210032</li>
+                        <li><span class="fa fa-envelope"></span> infodesk@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="social">
+                    <a href=""><span class="fa fa-facebook"></span></a>
+                    <a href=""><span class="fa fa-linkedin"></span></a>
+                    <a href=""><span class="fa fa-skype"></span></a>
+                    <a href=""><span class="fa fa-youtube-play"></span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/Javascript_topGo.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/registration_form.js"></script>
+    <script src="js/alert.js"></script>
+</body>
+
+</html>

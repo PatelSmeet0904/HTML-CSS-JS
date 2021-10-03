@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>First in First out(FIFO)</title>
+    <link rel="stylesheet" href="./Assets/CSS/backgrond/style.css">
+    <link rel="stylesheet" href="./Assets/CSS/Nav/Css_nav.css">
+</head>
+
+<body>
+    <div>
+        <button onclick="myFunction()" id="dark">Dark</button>
+        <button onclick="topFunction()" id="myBtn" class="up" title="Go to top">>>></button>
+    </div>
+    <div>
+        <section class="nav-bar">
+            <div class="nav-container">
+                <nav>
+                    <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+                    <ul class="nav-list">
+                        <li><a class="drop" href="./Index.html">Home</a></li>
+                        <li><a class="drop">FIFO</a>
+                            <ul class="nav-dropdown">
+                                <li><a id="navv" href="./FIFO.html">Explaination</a></li>
+                                <li><a id="navv" href="./FIFO_Simulation.html">Simulation</a></li>
+                                <li><a id="navv" href="./FIFO_Graph.html">Graph</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="drop">OPR</a>
+                            <ul class="nav-dropdown">
+                                <li><a id="navv" href="./OPR.html">Explaination</a></li>
+                                <li><a id="navv" href="./OPR_Simulation.html">Simulation</a></li>
+                                <li><a id="navv" href="./OPR_Graph.html">Graph</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="drop">LRU</a>
+                            <ul class="nav-dropdown">
+                                <li><a id="navv" href="./LRU.html">Explaination</a></li>
+                                <li><a id="navv" href="./LRU_Simulation.html">Simulation</a></li>
+                                <li><a id="navv" href="./LRU_Graph.html">Graph</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="drop">LIFO</a>
+                            <ul class="nav-dropdown">
+                                <li><a id="navv" href="./LIFO.html">Explaination</a></li>
+                                <li><a id="navv" href="./LIFO_Simulation.html">Simulation</a></li>
+                                <li><a id="navv" href="./LIFO_Graph.html">Graph</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="drop">Random</a>
+                            <ul class="nav-dropdown">
+                                <li><a id="navv" href="./Random.html">Explaination</a></li>
+                                <li><a id="navv" href="./Random_Simulation.html">Simulation</a></li>
+                                <li><a id="navv" href="./Random_Graph.html">Graph</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="drop">MRU</a>
+                            <ul class="nav-dropdown">
+                                <li><a id="navv" href="./MRU.html">Explaination</a></li>
+                                <li><a id="navv" href="./MRU_Simulation.html">Simulation</a></li>
+                                <li><a id="navv" href="./MRU_Graph.html">Graph</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="./Compersion.html">Compersion</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </div>
+    <canvas id="canvas">  </canvas>
+    <div id="se">
+        <div>
+            <h2 id="question1">
+                First in First out(FIFO):-
+            </h2>
+        </div>
+        <div class="l" id="ans1">
+            <li class="ex">When a page fault occurs, the OS has to remove a page from the memory so that it can fit in another page in the memory.</li>
+            <li class="ex"> These page replacement algorithms are used in operating systems that support virtual memory management.</li>
+            <li class="ex">FIFO Page Replacement technique is one of the simplest one to implement amongst other page replacement algorithms. It is a <strong> conservative algorithm</strong></li>
+            <li class="ex"> It is a<strong> low-overhead algorithm </strong> that maintains a queue to keep a track of all the pages in a memory.</li>
+        </div>
+        <div>
+            <h2 id="exampleShow">
+                Examle 1:
+            </h2>
+            <div id="question2">
+                Consider page reference string <strong>1, 3, 0, 3, 5, 6 </strong> with 3 page frames.Find number of page faults.
+            </div>
+            <div>
+                <h2 id="solutionshow">
+                    solution:
+                </h2>
+            </div>
+            <img class="responsive" style="max-height: 450px;" src="./Assets/Image/fifo1.jpg" alt="Ans Image">
+        </div>
+        <ul class="l" id="solutionOfExample1">
+            <li class="ex">Initially all slots are empty, so when <strong>1, 3, 0</strong> came they are allocated to the empty</li>
+            <li class="ex">slots —> <strong>3 Page Faults.</strong></li>
+            <li class="ex">when 3 comes, it is already in memory so —> <strong>0 Page Faults.</strong></li>
+            <li class="ex">Then 5 comes, it is not available in memory so it replaces the oldest page slot i.e 1.<strong> —>1 Page Fault.</strong></li>
+            <li class="ex">6 comes, it is also not available in memory so it replaces the oldest page slot i.e <strong>3 —>1 Page Fault.</strong></li>
+            <li class="ex">Finally when 3 come it is not avilable so it replaces <strong>0 1 page fault.</strong></li>
+        </ul>
+        <div class="l" id="extra">
+            <strong><main> <h2>Belady’s anomaly-</h2> </main> </strong>
+            <li class="ex">In the case of LRU and optimal page replacement algorithms, it is seen that the number of page faults will be reduced if we increase the number of frames. However, Balady found that, In FIFO page replacement algorithm, the number of page faults
+                will get increased with the increment in number of frames. This is the strange behavior shown by FIFO algorithm in some of the cases. This is an Anomaly called as Belady'sAnomaly.</li>
+            <li class="ex">
+                Let's examine such example : The reference String is given as 1, 2, 3, 4, 1, 2, 5, 1, 2, 3, 4, 5. Let's analyze the behavior of FIFO algorithm in two cases.
+            </li>
+            <div>
+                <h2>Case 1: frames = 3</h2>
+            </div>
+            <li class="ex"> If the system has 3 frames, the given reference string on using FIFO page replacement algorithm yields a total of 9 page faults. The diagram below illustrates the pattern of the page faults occurring in the example.</li>
+            <div>
+                <img class="responsive" style="max-height: 450px;" src="./Assets/Image/b-1.jpeg" alt="">
+            </div>
+            <div>
+                <h2>Case 2: frames = 4</h2>
+            </div>
+            <li class="ex">If the system has 4 frames, the given reference string on using FIFO page replacement algorithm yields a total of 10 page faults. The diagram below illustrates the pattern of the page faults occurring in the example.</li>
+            <div>
+                <img class="responsive" style="max-height: 550px;" src="./Assets/Image/b-2.jpeg" alt="">
+            </div>
+        </div>
+        <div>
+            <h2 id="AdvantagesShow">
+                Advantages
+            </h2>
+            <ul id="AdvantagesList">
+                <li class="ex">It is simple and easy to <strong>understand & implement.</strong></li>
+            </ul>
+            <h2 id="DisadvantagesShow">
+                Disadvantages
+            </h2>
+            <ul id="Disadvantageslist">
+                <li class="ex">The process effectiveness is<strong> low.</strong></li>
+                <li class="ex">When we increase the number of frames while using FIFO, we are giving more <strong>memory to processes.</strong> So, page <strong>fault should decrease,</strong> but here the page faults are increasing. This problem is called as <strong>Belady’s Anomaly.</strong></li>
+                <li class="ex">Every frame needs to be taken account off.</li>
+            </ul>
+        </div>
+
+        <div id="point">
+            <main>
+                <strong> 
+                    <h2 id="note">
+                        Note:
+                    </h2>
+                </strong>
+            </main>
+            <li class="ex">
+                Optimal page replacement is perfect, but not possible in practice as the operating system cannot know future requests. The use of Optimal Page replacement is to set up a benchmark so that other replacement algorithms can be analyzed against it.
+            </li>
+        </div>
+        <div>
+            <h2>
+                Reference for Better Understand
+            </h2>
+        </div>
+        <div>
+            <ul class="l">
+                <li class="ex "> <a href="https://www.youtube.com/embed/FWoMSiMep80" target="_blank" class="Reference">youtube Video(Jenny's lectures CS/IT NET&JRF)</a></li>
+                <li class="ex"> <a href="https://www.youtube.com/embed/8rcUs5RutX0" target="_blank" class="Reference">youtube Video(Gate Smashers)</a></li>
+                <li class="ex" id="gg"> <a href="https://www.geeksforgeeks.org/program-page-replacement-algorithms-set-2-fifo/" target="_blank" class="Reference">GeeksForGeeks For First In First Out</a></li>
+            </ul>
+        </div>
+        <div id="gave_ma">
+            <a class="btn" id="fs" href="./FIFO_Graph.html"> Graph</a>
+            <a class="btn" href="./FIFO_Simulation.html">Simulation</a>
+        </div>
+    </div>
+    <script src="./Assets/js/Javascript_topGO/Javascript_topGo.js"></script>
+    <script src="./Assets/js/Javascript_topGO/Dark_mode.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="./Assets/js/Javascript_Canvas/Javascript_Canvas.js"></script>
+    <script src="./Assets/js/Javascript_nav/Javascript_nav.js"></script>
+</body>
+
+</html>

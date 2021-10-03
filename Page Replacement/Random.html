@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title> Random Page Replacement Algorithm(Random):-</title>
+    <link rel="stylesheet" href="./Assets/CSS/backgrond/style.css">
+    <link rel="stylesheet" href="./Assets/CSS/Nav/Css_nav.css">
+</head>
+
+<body>
+    <div>
+        <button onclick="myFunction()" id="dark">Dark</button>
+        <button onclick="topFunction()" id="myBtn" class="up" title="Go to top">>>></button>
+    </div>
+    <div>
+        <section class="nav-bar">
+            <div class="nav-container">
+                <nav>
+                    <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+                    <ul class="nav-list">
+                        <li><a class="drop" href="./Index.html">Home</a></li>
+                        <li><a class="drop">FIFO</a>
+                            <ul class="nav-dropdown">
+                                <li><a id="navv" href="./FIFO.html">Explaination</a></li>
+                                <li><a id="navv" href="./FIFO_Simulation.html">Simulation</a></li>
+                                <li><a id="navv" href="./FIFO_Graph.html">Graph</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="drop">OPR</a>
+                            <ul class="nav-dropdown">
+                                <li><a id="navv" href="./OPR.html">Explaination</a></li>
+                                <li><a id="navv" href="./OPR_Simulation.html">Simulation</a></li>
+                                <li><a id="navv" href="./OPR_Graph.html">Graph</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="drop">LRU</a>
+                            <ul class="nav-dropdown">
+                                <li><a id="navv" href="./LRU.html">Explaination</a></li>
+                                <li><a id="navv" href="./LRU_Simulation.html">Simulation</a></li>
+                                <li><a id="navv" href="./LRU_Graph.html">Graph</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="drop">LIFO</a>
+                            <ul class="nav-dropdown">
+                                <li><a id="navv" href="./LIFO.html">Explaination</a></li>
+                                <li><a id="navv" href="./LIFO_Simulation.html">Simulation</a></li>
+                                <li><a id="navv" href="./LIFO_Graph.html">Graph</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="drop">Random</a>
+                            <ul class="nav-dropdown">
+                                <li><a id="navv" href="./Random.html">Explaination</a></li>
+                                <li><a id="navv" href="./Random_Simulation.html">Simulation</a></li>
+                                <li><a id="navv" href="./Random_Graph.html">Graph</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="drop">MRU</a>
+                            <ul class="nav-dropdown">
+                                <li><a id="navv" href="./MRU.html">Explaination</a></li>
+                                <li><a id="navv" href="./MRU_Simulation.html">Simulation</a></li>
+                                <li><a id="navv" href="./MRU_Graph.html">Graph</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="./Compersion.html">Compersion</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </div>
+    <canvas id="canvas">  </canvas>
+
+    <div>
+        <h2 id="question1">
+            Random Page Replacement Algorithm(Random):-
+        </h2>
+    </div>
+    <div class="l" id="se">
+        <li class="ex"> Random replacement algorithm replaces a random page in memory.</li>
+        <li class="ex"> This eliminates the overhead cost of tracking page references.</li>
+        <li class="ex"> Usually it fares better than FIFO, and for looping memory references it is better than LRU, although generally LRU performs better in practice.</li>
+        <li class="ex"> OS/390 uses global LRU approximation and falls back to random replacement when LRU performance degenerates, and the Intel i860 processor used a random replacement polic.</li>
+
+    </div>
+    <div id="gave_ma">
+        <a class="btn" id="fs" href="./Random_Graph.html"> Graph</a>
+        <a class="btn" href="./Random_Simulation.html">Simulation</a>
+    </div>
+    <script src="./Assets/js/Javascript_topGO/Javascript_topGo.js"></script>
+    <script src="./Assets/js/Javascript_topGO/Dark_mode.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="./Assets/js/Javascript_Canvas/Javascript_Canvas.js"></script>
+    <script src="./Assets/js/Javascript_nav/Javascript_nav.js"></script>
+</body>
+
+</html>

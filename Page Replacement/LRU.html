@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Least recent used(LRU) </title>
+    <link rel="stylesheet" href="./Assets/CSS/backgrond/style.css">
+    <link rel="stylesheet" href="./Assets/CSS/Nav/Css_nav.css">
+</head>
+
+<body>
+    <div>
+        <button onclick="myFunction()" id="dark">Dark</button>
+        <button onclick="topFunction()" id="myBtn" class="up" title="Go to top">>>></button>
+    </div>
+    <div>
+        <section class="nav-bar">
+            <div class="nav-container">
+                <nav>
+                    <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+                    <ul class="nav-list">
+                        <li><a class="drop" href="./Index.html">Home</a></li>
+                        <li><a class="drop">FIFO</a>
+                            <ul class="nav-dropdown">
+                                <li><a id="navv" href="./FIFO.html">Explaination</a></li>
+                                <li><a id="navv" href="./FIFO_Simulation.html">Simulation</a></li>
+                                <li><a id="navv" href="./FIFO_Graph.html">Graph</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="drop">OPR</a>
+                            <ul class="nav-dropdown">
+                                <li><a id="navv" href="./OPR.html">Explaination</a></li>
+                                <li><a id="navv" href="./OPR_Simulation.html">Simulation</a></li>
+                                <li><a id="navv" href="./OPR_Graph.html">Graph</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="drop">LRU</a>
+                            <ul class="nav-dropdown">
+                                <li><a id="navv" href="./LRU.html">Explaination</a></li>
+                                <li><a id="navv" href="./LRU_Simulation.html">Simulation</a></li>
+                                <li><a id="navv" href="./LRU_Graph.html">Graph</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="drop">LIFO</a>
+                            <ul class="nav-dropdown">
+                                <li><a id="navv" href="./LIFO.html">Explaination</a></li>
+                                <li><a id="navv" href="./LIFO_Simulation.html">Simulation</a></li>
+                                <li><a id="navv" href="./LIFO_Graph.html">Graph</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="drop">Random</a>
+                            <ul class="nav-dropdown">
+                                <li><a id="navv" href="./Random.html">Explaination</a></li>
+                                <li><a id="navv" href="./Random_Simulation.html">Simulation</a></li>
+                                <li><a id="navv" href="./Random_Graph.html">Graph</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="drop">MRU</a>
+                            <ul class="nav-dropdown">
+                                <li><a id="navv" href="./MRU.html">Explaination</a></li>
+                                <li><a id="navv" href="./MRU_Simulation.html">Simulation</a></li>
+                                <li><a id="navv" href="./MRU_Graph.html">Graph</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="./Compersion.html">Compersion</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </div>
+    <canvas id="canvas">  </canvas>
+    <div id="se">
+        <div>
+            <!-- This is for show question what is the fifo -->
+            <h2 id="question1">
+                Least recent used(LRU) :-
+            </h2>
+        </div>
+
+        <!-- Title and main questino section end-->
+        <!-- Main question ans  of  what is First in First out(FIFO)? start-->
+        <div id="ans1" class="l">
+            <!-- Here the ans for question what is the fifo -->
+            <!-- here main is use fo rgo to new line with out using br-->
+            <!-- and strong is use for bold oe show that this is important for us-->
+            <li class="ex">In <strong> Least Recently Used (LRU) </strong>algorithm is a Greedy algorithm where the page to be <strong>replaced is least recently used.</strong> </li>
+            <li class="ex">The idea is based on <strong>locality of reference,</strong> the least recently used page is not likely.</li>
+        </div>
+        <!-- Main question ans  of  what is First in First out(FIFO)? start-->
+
+        <!-- Start one example  First in First out(FIFO) -->
+        <div>
+            <h2 id="exampleShow">
+                <!-- this is just use for show that example 1-->
+                Examle 1 :-
+            </h2>
+            <div id="question2">
+                <!-- this line is for show example question -->
+                Consider the page reference string <strong>7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2 </strong>with <strong>4 page frames.</strong>Find number of page faults.
+            </div>
+            <div>
+                <h2 id="solutionshow">
+                    <!-- use for just show soution-->
+                    solution :-
+                </h2>
+                <!-- this is for add image of the solution in them -->
+            </div>
+            <img class="responsive" src="./Assets/Image/optimal.png" alt="Ans Image">
+        </div>
+        <ul class="l" id="solutionOfExample1">
+            <!--- solution start-->
+            <!-- show soution in unorder list-->
+            <li class="ex"> Initially all slots are empty, so when<strong> 7 0 1 2</strong> are allocated to the empty slots —> <strong>4 Page faults</strong></li>
+            <li class="ex"> 0 is already their so —><strong> 0 Page fault.</strong></li>
+            <li class="ex"> when 3 came it will take the place of 7 because it is least recently used —><strong>1 Page fault</strong></li>
+            <li class="ex"> 0 is already in memory so —><strong> 0 Page fault.</strong></li>
+            <li class="ex"> 4 will takes place of 1 —><strong> 1 Page Faul.</strong>t</li>
+            <li class="ex"> Now for the further page reference string —> 0 Page fault because they are already available in the memory.</li>
+        </ul>
+        <!-- Advantages and disAdvantages section start-->
+        <div>
+            <!-- this div is use for show Advantages and disAdvantages of First in First out(FIFO) and this Advantages and disAdvantages show using list -->
+            <h2 id="AdvantagesShow">
+                Advantages :-
+            </h2>
+            <ul id="AdvantagesList">
+                <li class="ex">It is open for<strong> full analysis.</strong></li>
+                <li class="ex">Assistance needed is <strong>low </strong>i.e Data Structure used are easy and light.</li>
+            </ul>
+            <h2 id="DisadvantagesShow">
+                Disadvantages :-
+            </h2>
+            <ul id="Disadvantageslist">
+                <li class="ex">OPR is perfect, but not possible in<strong> practice as the operating system</strong> cannot know future requests.</strong>
+                </li>
+                <li class="ex">In this, we replace the page which is <strong>least recently used,</strong> thus free from Belady’s Anomaly.</li>
+                <li class="ex">Easy to choose page which has faulted and hasn’t been used for a long time.</li>
+            </ul>
+        </div>
+        <div>
+            <h2>
+                Reference for Better Understand :-
+            </h2>
+        </div>
+        <div>
+            <ul class="l">
+                <li class="ex "> <a href="https://www.youtube.com/embed/DXU7SqsYDvg" target="_blank" class="Reference">youtube Video(Jenny's lectures CS/IT NET&JRF)</a></li>
+                <li class="ex"> <a href="https://www.youtube.com/embed/dYIoWkCvd6A" target="_blank" class="Reference">youtube Video(Gate Smashers)</a></li>
+                <li class="ex" id="gg"> <a href="https://www.geeksforgeeks.org/program-for-least-recently-used-lru-page-replacement-algorithm/" target="_blank" class="Reference">GeeksForGeeks For Least Recently Used</a></li>
+            </ul>
+        </div>
+        <div id="gave_ma">
+            <a class="btn" id="fs" href="./LRU_Graph.html"> Graph</a>
+            <a class="btn" href="./LRU_Simulation.html">Simulation</a>
+        </div>
+    </div>
+    <script src="./Assets/js/Javascript_topGO/Javascript_topGo.js"></script>
+    <script src="./Assets/js/Javascript_topGO/Dark_mode.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="./Assets/js/Javascript_Canvas/Javascript_Canvas.js"></script>
+    <script src="./Assets/js/Javascript_nav/Javascript_nav.js"></script>
+</body>
+
+</html>
